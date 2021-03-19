@@ -8,6 +8,7 @@
     <title>Document</title>
     <!-- link:css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
 <body>
@@ -21,7 +22,10 @@
                 <li><a href="">Tour</a></li>
                 <li><a href="">Contact</a></li>
                 <li>
-                    <a href="">More</a>
+                    <a href="">More
+                        <!-- nên tạo ra 1 class khác để tránh về sau có thể thay đổi icon khác -->
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
                     <ul class="subnav">
                         <li><a href="">Merchandise</a></li>
                         <li><a href="">Extras</a></li>
@@ -29,8 +33,14 @@
                     </ul>
                 </li>
             </ul>
+            <!-- .search-btn -> nhấn tab -->
+            <div class="search-btn">
+                <!-- nên tạo ra 1 class khác để tránh về sau có thể thay đổi icon khác -->
+                <i class="search-icon ti-search"></i>
+            </div>
         </div>
-
+        <!-- end header -->
+        
         <!-- slider -->
         <div id="slider">
 
