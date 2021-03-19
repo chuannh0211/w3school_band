@@ -28,32 +28,63 @@ html {
   background-color: black;
 }
 
-#nav {
+#nav,
+.subnav {
+  list-style-type: none;
 }
 
-#nav li {
+#nav > li {
   display: inline-block; /* hiển thị nằm ngang thẻ li*/
 }
 
-#nav li a {
+#nav li {
+  position: relative;
+}
+
+#nav li:hover .subnav{
+  display: block;
+  
+}
+
+/* lấy tất cả thẻ a là con trực tiếp của thẻ li là con trực tiếp của #nav */
+#nav > li > a {
   color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a {
   text-decoration: none; /* bỏ gạch chân thẻ a*/
   padding: 0 24px;
   line-height: 46px;
-  display: inline-block; /* tăng chiều cao thẻ a*/
+  display: block; /* tự động kế thừa chiều rộng + ngang của thẻ chứa nó */
 }
 
 /* nếu hover vào thẻ a -> gặp lỗi khi hover vào các thẻ a con sẽ bị mất active ở thẻ đc chọn*/
-#nav li:hover a {
+#nav > li:hover > a, /*hover cho các thẻ li cha*/
+#nav .subnav li:hover { /*hover cho các thẻ li của thẻ subnav (con của nav)*/
   color: black;
   background-color: #ccc;
 }
 
-#nav .subnav{
-    display: none;
+#nav .subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+  color: #000;
+  padding: 0 12px;
+  line-height: 38px;
 }
 
 #slider {
+  height: 500px;
+  background-color: blue;
 }
 
 #content {
