@@ -30,6 +30,11 @@ html {
   right: 0;
   height: 46px;
   background-color: black;
+  z-index: 1; /*tăng độ nổi cho #header*/
+}
+
+.clear{
+  clear:both;
 }
 
 #nav {
@@ -111,11 +116,86 @@ html {
 }
 
 #slider {
-  height: 500px;
-  background-color: blue;
+  position: relative;
+  margin-top: 46px; /* do header dùng position:fixed -> tăng margin bằng với chiều cào của header*/
+  padding-top: 50%; /*nếu thêm giá trị % vào padding-top -> gtri % sẽ là % chiều ngang của chính nó */
+  /* background-image: url('/assets/img/slider/slider1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top; */
+  /*shorthand -> background-image; top, center:position; cover:background-size; background-no-repeat */
+  background: url("/assets/img/slider/slider1.jpg") top center / cover no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 48px;
+  color: #fff;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%); /*Xem lại bài tips căn giữa*/
+}
+
+#slider .text-heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#slider .text-description {
+  font-size: 15px;
+  margin-top: 25px;
 }
 
 #content {
+}
+
+#content .content-section {
+  width: 800px;
+  padding: 64px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content .section-heading {
+  margin: 10px 0;
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+#content .about-text {
+  font-size: 15px;
+  text-align: justify;
+  margin: 15px 0;
+  line-height: 1.4; /*khoảng cách giữa các dòng*/
+}
+
+#content .member-list {
+  padding: 32px 0;
+}
+#content .member-item {
+  float: left;
+  text-align: center; /*vì member-name + member-img là con của member-item -> 2 th sẽ đc thừa hưởng thuộc tính text-align:center*/
+  width: calc(100% / 3);
+}
+#content .member-name {
+  margin: 15px 0;
+}
+#content .member-img {
+  margin-bottom: 16px;
+  border-radius: 4px;
+  width: 154px;
 }
 
 #footer {
