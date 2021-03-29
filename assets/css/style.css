@@ -33,8 +33,12 @@ html {
   z-index: 1; /*tăng độ nổi cho #header*/
 }
 
-.clear{
-  clear:both;
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: #ccc;
 }
 
 #nav {
@@ -153,7 +157,7 @@ html {
 
 #content .content-section {
   width: 800px;
-  padding: 64px 0;
+  padding: 64px 16px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -196,6 +200,97 @@ html {
   margin-bottom: 16px;
   border-radius: 4px;
   width: 154px;
+}
+
+.tour-section {
+  background: #000;
+}
+
+.tickets-list {
+  background: #fff;
+  margin-top: 40px;
+}
+
+.tickets-list li {
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tickets-list li a {
+  text-decoration: none;
+  color: #757575;
+  font-size: 15px;
+}
+
+.tour-section .sold-out {
+  background: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.tour-section .quantity {
+  float: right;
+  background: #000;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* tạo hình tròn*/
+  text-align: center; /* căn giữa từ trái -> phải*/
+  line-height: 24px; /* căn giữa từ trên -> dưới, gtri bằng chiều cao của element*/
+  margin: -3px;
+}
+
+/*Place*/
+.places-list {
+  margin: 32px -8px 0;
+}
+
+.place-item {
+  float: left;
+  width: calc(100% / 3);
+  padding: 8px;
+}
+
+.place-img {
+  width: 100%; /*do tính chất của thẻ img nên các ảnh bị đè lên nhau -> set lại width = 100%*/
+  display: block; /*do thẻ img có tính chất inline nên tạo ra 1 khoảng cách -> dùng display:block */
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-body {
+  background: #fff;
+  font-size: 15px;
+  padding: 0 16px;
+}
+
+.place-heading {
+  padding-top: 15px;
+}
+
+.place-time {
+  padding-top: 15px;
+  color: #757575;
+}
+
+.place-desc {
+  padding-top: 15px;
+}
+
+.buy-ticket {
+  color: #fff;
+  background: #000;
+  text-align: center;
+  display: inline-block; /*do tính chất thẻ <a> là inline -> chuyển qua block*/
+  width: 108px;
+  height: 38px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 38px;
 }
 
 #footer {
