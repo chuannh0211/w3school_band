@@ -7,6 +7,7 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 /* Nguyên tắc:
 1. Từ ngoài vào trong
@@ -32,7 +33,7 @@ html {
   background-color: black;
   z-index: 1; /*tăng độ nổi cho #header*/
 }
-
+/* common */
 .clear {
   clear: both;
 }
@@ -41,6 +42,72 @@ html {
   color: #ccc;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-third {
+  width: 33.333333%;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+/*sử dụng thay cho class clear*/
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  color: #fff;
+  background: #000;
+  text-align: center;
+  display: inline-block; /*do tính chất thẻ <a> là inline -> chuyển qua block*/
+  width: 108px;
+  height: 38px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 38px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #ccc;
+  color: #000;
+}
+
+.pull-right {
+  float: right !important;
+}
+/*main*/
 #nav {
   display: inline-block;
 }
@@ -188,11 +255,7 @@ html {
 #content .member-list {
   padding: 32px 0;
 }
-#content .member-item {
-  float: left;
-  text-align: center; /*vì member-name + member-img là con của member-item -> 2 th sẽ đc thừa hưởng thuộc tính text-align:center*/
-  width: calc(100% / 3);
-}
+
 #content .member-name {
   margin: 15px 0;
 }
@@ -243,13 +306,12 @@ html {
 
 /*Place*/
 .places-list {
-  margin: 32px -8px 0;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .place-item {
-  float: left;
   width: calc(100% / 3);
-  padding: 8px;
 }
 
 .place-img {
@@ -280,18 +342,84 @@ html {
   padding-top: 15px;
 }
 
-.buy-ticket {
-  color: #fff;
-  background: #000;
-  text-align: center;
-  display: inline-block; /*do tính chất thẻ <a> là inline -> chuyển qua block*/
-  width: 108px;
-  height: 38px;
-  margin-top: 15px;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 38px;
+.contact-content {
+  padding-top: 33px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+  width: 30px;
+  display: inline-block;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none; /*bỏ đường viên khi click vào input trên trình duyệt*/
+}
+
+.map-section img {
+  width: 100%;
 }
 
 #footer {
+  padding: 64px 0;
+  text-align: center;
+}
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+#footer .socials-list a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+#footer .coppyright a:hover,
+#footer .socials-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .coppyright {
+  margin-top: 15px;
+}
+
+#footer .coppyright a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pc,
+.tablet,
+.mobile {
+  font-size: 68px;
+  display: none;
+}
+/*Break point*/
+/*pc*/
+@media (min-width: 1024px) {
+  .pc {
+    display: block;
+  }
+}
+/*tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+  .tablet {
+    display: block;
+  }
+}
+/*mobile*/
+@media (max-width: 730px) {
+  .mobile {
+    display: block;
+  }
 }

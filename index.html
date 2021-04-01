@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The band</title>
+    <link rel="icon" href="/assets/font/themify-icons-font/themify-icons/SVG/timer.svg" type="image/x-icon"/>
     <!-- link:css -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
@@ -17,19 +18,19 @@
         <div id="header">
             <!-- ul#nav>li*5>a -> cú pháp tạo thẻ ul có id là nav chứa 5 thẻ li, mỗi thẻ li có chứa 1 thẻ a -->
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="">More
                         <!-- nên tạo ra 1 class khác để tránh về sau có thể thay đổi icon khác -->
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -51,7 +52,7 @@
 
         <!-- content -->
         <div id="content">
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
@@ -64,16 +65,16 @@
                     enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat.
                 </p>
-                <div class="member-list">
-                    <div class="member-item">
+                <div class="row member-list">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/member/bandmember.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/member/bandmember.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-third text-center">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/member/bandmember.jpg" alt="Name" class="member-img">
                     </div>
@@ -84,7 +85,7 @@
 
             <!-- Tour section -->
             <div class="tour-section">
-                <div class="content-section">
+                <div id="tour" class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
                     <ul class="tickets-list">
@@ -92,32 +93,32 @@
                         <li><a href="">October <span class="sold-out">Sold out</a></li>
                         <li><a href="">November <span class="quantity">3</a></li>
                     </ul>
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third">
                             <img src="/assets/img/tours/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="buy-ticket">Buy Tickets</a>
+                                <a href="" class="btn">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="/assets/img/tours/paris.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="buy-ticket">Buy Tickets</a>
+                                <a href="" class="btn">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="/assets/img/tours/sanfran.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="buy-ticket">Buy Tickets</a>
+                                <a href="" class="btn">Buy Tickets</a>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -125,19 +126,63 @@
                 </div>
 
             </div>
-
-            <div class="content-section">
+            <!-- Contact -->
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" id="" placeholder="Name" required class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="text" name="" id="" placeholder="Email" required class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" id="" placeholder="Message" class="form-control">
+                                </div>
+                            </div>
+                            <div class="mt-16">
+                                <input class="btn pull-right" type="submit" value="SEND">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- End contact -->
+            <div class="map-section">
+                <img src="/assets/img/map.jpg" alt="Map">
             </div>
         </div>
 
         <!-- footer -->
         <div id="footer">
-
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter-alt"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>  
+            </div>
+            <p class="coppyright">Powered by <a href="">w3.css</a></p>
         </div>
     </div>
+<!-- 
+    <h2 class="pc">PC</h2>
+    <h2 class="tablet">TABLE</h2>
+    <h2 class="mobile">MOBILE</h2> -->
 </body>
 
 </html>
