@@ -1,0 +1,28 @@
+/*Break point*/
+/*pc*/
+@media (min-width: 1024px) {
+  .pc {
+    display: block;
+  }
+}
+/*tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+  #content .content-section {
+    /*do màn hình tablet nhỏ hơn 800px(kích thước của contect-section màn pc -> đjăt width 100% để khi thu nhỏ về màn tablet thì độ rộng của màn cx thu nhỏ theo*/
+    width: 100%;
+  }
+}
+/*mobile*/
+@media (max-width: 740px) {
+  #nav li {
+    display: block;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
+
+  #header .mobile-menu-btn{
+    display: block;
+  }
+}
